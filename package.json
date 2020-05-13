@@ -1,0 +1,9 @@
+{
+  "name": "colorblind",
+  "version": "0.0.1",
+  "description": "colorblind friendly color palettes",
+  "main": "index.js",
+  "author": "Chris Bolin",
+  "license": "MIT",
+  "private": false
+}
