@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "Chris Bolin",
   "license": "MIT",
+  "files": [
+    "/index.js"
+  ],
   "private": false
 }
