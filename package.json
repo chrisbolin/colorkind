@@ -8,5 +8,6 @@
   "files": [
     "dist/"
   ],
-  "private": false
+  "private": false,
+  "sideEffects": false
 }
