@@ -2,70 +2,77 @@
 // https://personal.sron.nl/~pault/data/tol_colors.py
 // https://personal.sron.nl/~pault/data/colourschemes.pdf
 
-function qualitative() {
-  return {
-    // Tol: "my default colour scheme for qualitative data is the bright scheme"
-    bright: [
-      "#4477AA",
-      "#EE6677",
-      "#228833",
-      "#CCBB44",
-      "#66CCEE",
-      "#AA3377",
-      "#BBBBBB",
-    ],
-    highContrast: ["#004488", "#DDAA33", "#BB5566"],
-    vibrant: [
-      "#EE7733",
-      "#0077BB",
-      "#33BBEE",
-      "#EE3377",
-      "#CC3311",
-      "#009988",
-      "#BBBBBB",
-    ],
-    muted: [
-      "#CC6677",
-      "#332288",
-      "#DDCC77",
-      "#117733",
-      "#88CCEE",
-      "#882255",
-      "#44AA99",
-      "#999933",
-      "#AA4499",
-      "#DDDDDD",
-    ],
-    light: [
-      "#77AADD",
-      "#EE8866",
-      "#EEDD88",
-      "#FFAABB",
-      "#99DDFF",
-      "#44BB99",
-      "#BBCC33",
-      "#AAAA00",
-      "#DDDDDD",
-    ],
-    // https://www.r-bloggers.com/the-paul-tol-21-color-salute/
-    legacy: [
-      "#332288",
-      "#117733",
-      "#6699cc",
-      "#ddcc77",
-      "#999933",
-      "#cc6677",
-      "#aa4466",
-      "#882255",
-      "#aa4499",
-      "#44aa99",
-      "#661100",
-      "#88ccee",
-    ],
-  };
-}
+const descriptions = {
+  highContrast: "Paul Tol's 'high contrast' theme",
+  bright: "Paul Tol's 'bright' theme",
+  light: "Paul Tol's 'light' theme",
+  muted: "Paul Tol's 'muted' theme",
+  legacy: "Paul Tol's legacy qualitative theme",
+  discrete: "Paul Tol's 'discrete rainbow' theme",
+};
 
-function discrete() {
+const qualitative = {
+  // Tol: "my default colour scheme for qualitative data is the bright scheme"
+  bright: [
+    "#4477AA",
+    "#EE6677",
+    "#228833",
+    "#CCBB44",
+    "#66CCEE",
+    "#AA3377",
+    "#BBBBBB",
+  ],
+  highContrast: ["#004488", "#DDAA33", "#BB5566"],
+  vibrant: [
+    "#EE7733",
+    "#0077BB",
+    "#33BBEE",
+    "#EE3377",
+    "#CC3311",
+    "#009988",
+    "#BBBBBB",
+  ],
+  muted: [
+    "#CC6677",
+    "#332288",
+    "#DDCC77",
+    "#117733",
+    "#88CCEE",
+    "#882255",
+    "#44AA99",
+    "#999933",
+    "#AA4499",
+    "#DDDDDD",
+  ],
+  light: [
+    "#77AADD",
+    "#EE8866",
+    "#EEDD88",
+    "#FFAABB",
+    "#99DDFF",
+    "#44BB99",
+    "#BBCC33",
+    "#AAAA00",
+    "#DDDDDD",
+  ],
+  // https://www.r-bloggers.com/the-paul-tol-21-color-salute/
+  legacy: [
+    "#332288",
+    "#117733",
+    "#6699cc",
+    "#ddcc77",
+    "#999933",
+    "#cc6677",
+    "#aa4466",
+    "#882255",
+    "#aa4499",
+    "#44aa99",
+    "#661100",
+    "#88ccee",
+  ],
+};
+
+function makeDiscrete() {
   const colors = [
     "#E8ECFB",
     "#D9CCE3",
@@ -196,4 +203,4 @@ function discrete() {
   );
 }
 
-module.exports = { qualitative, discrete };
+module.exports = { qualitative, discrete: makeDiscrete(), descriptions };

@@ -1,39 +1,101 @@
 const path = require("path");
 const tol = require("./tol");
 
-function numbered() {
-  const tolQualitative = tol.qualitative();
-  const tolDiscrete = tol.discrete();
-
-  return [
-    { number: 2, set: tolQualitative.highContrast },
-    { number: 3, set: tolQualitative.highContrast },
-    { number: 4, set: tolQualitative.bright },
-    { number: 5, set: tolQualitative.bright },
-    { number: 6, set: tolQualitative.bright },
-    { number: 7, set: tolQualitative.bright },
-    { number: 8, set: tolQualitative.light },
-    { number: 9, set: tolQualitative.light },
-    { number: 10, set: tolQualitative.muted },
-    { number: 11, set: tolQualitative.legacy },
-    { number: 12, set: tolQualitative.legacy },
-  ];
-}
-
-function named() {
-  const tolQualitative = tol.qualitative();
-  const tolDiscrete = tol.discrete();
-
-  return [
-    { fileName: "index", set: tolQualitative.bright },
-    { fileName: "tol-high-contrast", set: tolQualitative.highContrast },
-    { fileName: "tol-bright", set: tolQualitative.bright },
-    { fileName: "tol-light", set: tolQualitative.light },
-    { fileName: "tol-muted", set: tolQualitative.muted },
-    { fileName: "tol-legacy", set: tolQualitative.legacy },
-    { folderName: "tol-discrete-rainbow", sets: tolDiscrete },
-  ];
-}
+const recipes = [
+  // default
+  {
+    fileName: "index",
+    set: tol.qualitative.bright,
+    description: tol.descriptions.bright,
+  },
+  // numbered
+  {
+    number: 2,
+    set: tol.qualitative.highContrast,
+    description: tol.descriptions.highContrast,
+  },
+  {
+    number: 3,
+    set: tol.qualitative.highContrast,
+    description: tol.descriptions.highContrast,
+  },
+  {
+    number: 4,
+    set: tol.qualitative.bright,
+    description: tol.descriptions.bright,
+  },
+  {
+    number: 5,
+    set: tol.qualitative.bright,
+    description: tol.descriptions.bright,
+  },
+  {
+    number: 6,
+    set: tol.qualitative.bright,
+    description: tol.descriptions.bright,
+  },
+  {
+    number: 7,
+    set: tol.qualitative.bright,
+    description: tol.descriptions.bright,
+  },
+  {
+    number: 8,
+    set: tol.qualitative.light,
+    description: tol.descriptions.light,
+  },
+  {
+    number: 9,
+    set: tol.qualitative.light,
+    description: tol.descriptions.light,
+  },
+  {
+    number: 10,
+    set: tol.qualitative.muted,
+    description: tol.descriptions.muted,
+  },
+  {
+    number: 11,
+    set: tol.qualitative.legacy,
+    description: tol.descriptions.legacy,
+  },
+  {
+    number: 12,
+    set: tol.qualitative.legacy,
+    description: tol.descriptions.legacy,
+  },
+  // named
+  {
+    fileName: "tol-high-contrast",
+    set: tol.qualitative.highContrast,
+    description: tol.descriptions.highContrast,
+  },
+  {
+    fileName: "tol-bright",
+    set: tol.qualitative.bright,
+    description: tol.descriptions.bright,
+  },
+  {
+    fileName: "tol-light",
+    set: tol.qualitative.light,
+    description: tol.descriptions.light,
+  },
+  {
+    fileName: "tol-muted",
+    set: tol.qualitative.muted,
+    description: tol.descriptions.muted,
+  },
+  {
+    fileName: "tol-legacy",
+    set: tol.qualitative.legacy,
+    description: tol.descriptions.legacy,
+  },
+  {
+    folderName: "tol-discrete-rainbow",
+    sets: tol.discrete,
+    description: tol.descriptions.discrete,
+  },
+];
 
 function ingestRecipe(recipe) {
   if (recipe.number && recipe.set) {
@@ -57,7 +119,7 @@ function ingestRecipe(recipe) {
 }
 
 function main() {
-  return [...numbered(), ...named()].flatMap(ingestRecipe);
+  return recipes.flatMap(ingestRecipe);
 }
 
 module.exports = main;
