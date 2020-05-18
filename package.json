@@ -8,5 +8,6 @@
   "files": [
     "/index.js"
   ],
-  "private": false
+  "private": false,
+  "devDependencies": {}
 }
