@@ -103,14 +103,19 @@ function ingestRecipe(recipe) {
     const contents = recipe.set.slice(0, recipe.number);
     if (contents.length !== recipe.number)
       throw new Error(`Recipe not long enough: ${JSON.stringify(recipe)}`);
-    return { path, contents };
+    return { path, contents, description: recipe.description };
   } else if (recipe.fileName && recipe.set) {
-    return { path: recipe.fileName, contents: recipe.set };
+    return {
+      path: recipe.fileName,
+      contents: recipe.set,
+      description: recipe.description,
+    };
   } else if (recipe.folderName && recipe.sets) {
     return recipe.sets.map((set) =>
       ingestRecipe({
         fileName: path.join(recipe.folderName, set.length.toString()),
         set,
+        description: recipe.description,
       })
     );
   } else {
