@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const path = require("path");
-const files = require("./files");
+const files = require("./utils/files");
 
 const DIST_ROOT = path.resolve(__dirname, "../dist");
 
@@ -23,7 +23,7 @@ async function main() {
   for (file of files()) {
     const fullPath = path.resolve(DIST_ROOT, file.path) + ".js";
     await ensurePath(fullPath);
-    console.log("write", file.contents.length, "to", fullPath);
+    console.log("write to", fullPath);
     await fs.writeFile(fullPath, jsFile(file.contents));
   }
 }
