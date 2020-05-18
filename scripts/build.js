@@ -19,7 +19,7 @@ function tableRow(exportable, fullPath) {
   const count = exportable.contents.length;
   let importString = "colorkind";
   if (exportable.path !== "index") {
-    importString = importString + "/" + exportable.path;
+    importString = importString + "/dist/" + exportable.path;
   }
   return `| ${"`" + importString + "`"} | ${count} | ${
     exportable.description
