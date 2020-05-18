@@ -2,12 +2,19 @@
   "name": "colorkind",
   "version": "0.2.0",
   "description": "colorblind-friendly color palettes",
-  "main": "dist/index.js",
   "author": "Chris Bolin",
   "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "stats": "node scripts/stats.js"
+  },
   "files": [
     "dist/"
   ],
   "private": false,
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "package-build-stats": "^6.2.2"
+  }
 }
