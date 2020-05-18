@@ -2,12 +2,11 @@
   "name": "colorkind",
   "version": "0.0.1",
   "description": "colorblind-friendly color palettes",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Chris Bolin",
   "license": "MIT",
   "files": [
-    "/index.js"
+    "dist/"
   ],
-  "private": false,
-  "devDependencies": {}
+  "private": false
 }
