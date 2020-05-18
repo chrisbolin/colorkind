@@ -1,6 +1,6 @@
 {
   "name": "colorkind",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "colorblind-friendly color palettes",
   "main": "dist/index.js",
   "author": "Chris Bolin",
