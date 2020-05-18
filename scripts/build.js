@@ -8,6 +8,10 @@ function jsFile(contents) {
   return `module.exports = ${JSON.stringify(contents, null, 2)};`;
 }
 
+function tsDeclarationFile() {
+  return ["const colors: Array<string>;", "export = colors;"].join("\n");
+}
+
 function tableHeader() {
   return [
     "| Import path | Colors |  Description |",
@@ -41,9 +45,12 @@ async function main() {
   console.log(tableHeader());
   for (exportable of exportables()) {
     const fullPath = path.resolve(DIST_ROOT, exportable.path) + ".js";
+    const fullTSDeclarationPath =
+      path.resolve(DIST_ROOT, exportable.path) + ".d.ts";
     await ensurePath(fullPath);
     console.log(tableRow(exportable, fullPath));
     await fs.writeFile(fullPath, jsFile(exportable.contents));
+    await fs.writeFile(fullTSDeclarationPath, tsDeclarationFile());
   }
 }
 
