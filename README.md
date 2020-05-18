@@ -12,52 +12,52 @@ Colorkind exports a default pallette of 7 colors (Paul Tol's 'bright' pallette).
 ```js
 const pallette = require("colorkind"); // ["#4477AA", "#EE6677", ... ] default 7-color pallette
 // import by number of colors
-const pallette = require("colorkind/2"); // [ "#004488", "#DDAA33" ] 2-color pallette
-const pallette = require("colorkind/12"); // [ "#332288", "#117733", ... ] 12-color pallette
+const pallette = require("colorkind/dist/2"); // [ "#004488", "#DDAA33" ] 2-color pallette
+const pallette = require("colorkind/dist/12"); // [ "#332288", "#117733", ... ] 12-color pallette
 // import by pallette name
-const pallette = require("colorkind/tol-light"); // [ "#77AADD", "#EE8866", ... ] Paul Tol's 'light' pallette
+const pallette = require("colorkind/dist/tol-light"); // [ "#77AADD", "#EE8866", ... ] Paul Tol's 'light' pallette
 ```
 
 ## Available pallettes
 
-| Import path                         | Colors | Description                         |
-| ----------------------------------- | ------ | ----------------------------------- |
-| `colorkind`                         | 7      | Paul Tol's 'bright' theme           |
-| `colorkind/2`                       | 2      | Paul Tol's 'high contrast' theme    |
-| `colorkind/3`                       | 3      | Paul Tol's 'high contrast' theme    |
-| `colorkind/4`                       | 4      | Paul Tol's 'bright' theme           |
-| `colorkind/5`                       | 5      | Paul Tol's 'bright' theme           |
-| `colorkind/6`                       | 6      | Paul Tol's 'bright' theme           |
-| `colorkind/7`                       | 7      | Paul Tol's 'bright' theme           |
-| `colorkind/8`                       | 8      | Paul Tol's 'light' theme            |
-| `colorkind/9`                       | 9      | Paul Tol's 'light' theme            |
-| `colorkind/10`                      | 10     | Paul Tol's 'muted' theme            |
-| `colorkind/11`                      | 11     | Paul Tol's legacy qualitative theme |
-| `colorkind/12`                      | 12     | Paul Tol's legacy qualitative theme |
-| `colorkind/tol-high-contrast`       | 3      | Paul Tol's 'high contrast' theme    |
-| `colorkind/tol-bright`              | 7      | Paul Tol's 'bright' theme           |
-| `colorkind/tol-light`               | 9      | Paul Tol's 'light' theme            |
-| `colorkind/tol-muted`               | 10     | Paul Tol's 'muted' theme            |
-| `colorkind/tol-legacy`              | 12     | Paul Tol's legacy qualitative theme |
-| `colorkind/tol-discrete-rainbow/2`  | 2      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/3`  | 3      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/4`  | 4      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/5`  | 5      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/6`  | 6      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/7`  | 7      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/8`  | 8      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/9`  | 9      | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/10` | 10     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/11` | 11     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/12` | 12     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/13` | 13     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/14` | 14     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/15` | 15     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/16` | 16     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/17` | 17     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/18` | 18     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/19` | 19     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/20` | 20     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/21` | 21     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/22` | 22     | Paul Tol's 'discrete rainbow' theme |
-| `colorkind/tol-discrete-rainbow/23` | 23     | Paul Tol's 'discrete rainbow' theme |
+| Import path                              | Colors | Description                         |
+| ---------------------------------------- | ------ | ----------------------------------- |
+| `colorkind`                              | 7      | Paul Tol's 'bright' theme           |
+| `colorkind/dist/2`                       | 2      | Paul Tol's 'high contrast' theme    |
+| `colorkind/dist/3`                       | 3      | Paul Tol's 'high contrast' theme    |
+| `colorkind/dist/4`                       | 4      | Paul Tol's 'bright' theme           |
+| `colorkind/dist/5`                       | 5      | Paul Tol's 'bright' theme           |
+| `colorkind/dist/6`                       | 6      | Paul Tol's 'bright' theme           |
+| `colorkind/dist/7`                       | 7      | Paul Tol's 'bright' theme           |
+| `colorkind/dist/8`                       | 8      | Paul Tol's 'light' theme            |
+| `colorkind/dist/9`                       | 9      | Paul Tol's 'light' theme            |
+| `colorkind/dist/10`                      | 10     | Paul Tol's 'muted' theme            |
+| `colorkind/dist/11`                      | 11     | Paul Tol's legacy qualitative theme |
+| `colorkind/dist/12`                      | 12     | Paul Tol's legacy qualitative theme |
+| `colorkind/dist/tol-high-contrast`       | 3      | Paul Tol's 'high contrast' theme    |
+| `colorkind/dist/tol-bright`              | 7      | Paul Tol's 'bright' theme           |
+| `colorkind/dist/tol-light`               | 9      | Paul Tol's 'light' theme            |
+| `colorkind/dist/tol-muted`               | 10     | Paul Tol's 'muted' theme            |
+| `colorkind/dist/tol-legacy`              | 12     | Paul Tol's legacy qualitative theme |
+| `colorkind/dist/tol-discrete-rainbow/2`  | 2      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/3`  | 3      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/4`  | 4      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/5`  | 5      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/6`  | 6      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/7`  | 7      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/8`  | 8      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/9`  | 9      | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/10` | 10     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/11` | 11     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/12` | 12     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/13` | 13     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/14` | 14     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/15` | 15     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/16` | 16     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/17` | 17     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/18` | 18     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/19` | 19     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/20` | 20     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/21` | 21     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/22` | 22     | Paul Tol's 'discrete rainbow' theme |
+| `colorkind/dist/tol-discrete-rainbow/23` | 23     | Paul Tol's 'discrete rainbow' theme |
