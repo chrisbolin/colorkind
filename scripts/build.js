@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const path = require("path");
-const files = require("./utils/files");
+const exportables = require("./utils/exportables");
 
 const DIST_ROOT = path.resolve(__dirname, "../dist");
 
@@ -15,13 +15,15 @@ function tableHeader() {
   ].join("\n");
 }
 
-function tableRow(file, fullPath) {
-  const count = file.contents.length;
+function tableRow(exportable, fullPath) {
+  const count = exportable.contents.length;
   let importString = "colorkind";
-  if (file.path !== "index") {
-    importString = importString + "/" + file.path;
+  if (exportable.path !== "index") {
+    importString = importString + "/" + exportable.path;
   }
-  return `| ${"`" + importString + "`"} | ${count} | ${file.description} |`;
+  return `| ${"`" + importString + "`"} | ${count} | ${
+    exportable.description
+  } |`;
 }
 
 async function ensurePath(filePath) {
@@ -37,11 +39,11 @@ async function ensurePath(filePath) {
 
 async function main() {
   console.log(tableHeader());
-  for (file of files()) {
-    const fullPath = path.resolve(DIST_ROOT, file.path) + ".js";
+  for (exportable of exportables()) {
+    const fullPath = path.resolve(DIST_ROOT, exportable.path) + ".js";
     await ensurePath(fullPath);
-    console.log(tableRow(file, fullPath));
-    await fs.writeFile(fullPath, jsFile(file.contents));
+    console.log(tableRow(exportable, fullPath));
+    await fs.writeFile(fullPath, jsFile(exportable.contents));
   }
 }
 
